@@ -1,0 +1,22 @@
+{
+  "name": "playwrightproject",
+  "version": "1.0.0",
+  "description": "automation framework with playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramhagit/PlaywrightProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramhagit/PlaywrightProject/issues"
+  },
+  "homepage": "https://github.com/ramhagit/PlaywrightProject#readme",
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  }
+}
