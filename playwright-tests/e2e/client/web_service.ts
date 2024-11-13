@@ -14,10 +14,10 @@ export class WebService {
 
         // Expect a title "to contain" a substring.
         await expect(this.page).toHaveTitle(/drpt-external-dev/);
-    
+
         // Expect page to have a label for password.
         await expect(this.page.locator('label[for=password]')).toContainText('Enter store password');
-    
+
         // Expect page to have an input with id = password.
         await expect(this.page.locator('input[id=password]')).toBeVisible();
 
@@ -104,12 +104,12 @@ export class WebService {
         await verificationValueLocator.fill(`${verificationCode}`);
         await nameOnCardLocator.fill(cardHolderName);
     }
-    
+
     async validateErrorForInvalidCardNumber() {
         const cardNumber_iFrame = this.page.frameLocator('//iframe[contains(@id,"card-fields-number-")]');
         await expect(cardNumber_iFrame.locator('#error-for-number')).toContainText('Enter a card number');
     }
-    
+
     async clickPayNowAndValidate(email: string, firstName: string, cardHolderName: string, desiredTotal: number) {
         await this.page.getByRole('button', { name: 'Pay now' }).click();
         await expect(this.page.getByRole('heading', { name: `Thank you, ${firstName}!` })).toBeVisible();

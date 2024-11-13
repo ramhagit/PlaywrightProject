@@ -16,7 +16,7 @@ test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
     webService = new WebService(page);
 });
-    
+
 test(`navigate to login page and make sure it's loaded, login & make sure it succeeded`, async () => {
     await webService.loginAndValidate('giclao');
 });
